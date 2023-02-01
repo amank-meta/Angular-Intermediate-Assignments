@@ -4,6 +4,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductComponent } from './product/product.component';
+import { AttributeDirective } from './attribute.directive';
 
 // import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
@@ -11,6 +12,7 @@ import { ProductComponent } from './product/product.component';
   declarations: [
     AppComponent,
     ProductComponent,
+    AttributeDirective,
   ],
   imports: [
     BrowserModule,
