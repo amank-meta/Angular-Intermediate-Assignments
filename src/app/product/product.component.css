@@ -1,0 +1,31 @@
+.btn
+{
+    margin: auto;
+    margin-top: 17px;
+    margin-left: 36%;
+    border-radius: 4px;
+    background-color: black;
+}
+.img
+{
+    padding: 20px;
+    border: #563d7c;
+    border-radius: 3px;
+}
+.card
+{
+    width: 22rem;
+    margin-left: 33%;
+    margin-top: 5%;
+    background-color:#f7f7f9;
+    border-color: #705c8f;
+    overflow: hidden;
+}
+.btn-close
+{
+    float: right;
+}
+.row
+{
+    margin-left: 15px;
+}
