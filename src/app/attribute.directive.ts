@@ -8,15 +8,11 @@ export class AttributeDirective {
   constructor(private el: ElementRef) { 
   }
   @HostListener('mouseenter') onMouseEnter() {
-    this.changeBackgroundColor('#705c8f');
+    this.el.nativeElement.style.opacity = 0.85;
   }
   @HostListener('mouseleave') onMouseLeave() {
-    this.changeBackgroundColor('black');
-  }
+    this.el.nativeElement.style.opacity = 1;
 
-  private changeBackgroundColor(color: string) {
-    this.el.nativeElement.style.backgroundColor = color;
-    // this.el.nativeElement.style.borderColor = color;
   }
 
 }

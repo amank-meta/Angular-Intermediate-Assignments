@@ -4,7 +4,8 @@
     margin-top: 17px;
     margin-left: 36%;
     border-radius: 4px;
-    background-color: black;
+    background-color: #222;
+    color: #fff;
 }
 .img
 {
@@ -20,6 +21,7 @@
     background-color:#f7f7f9;
     border-color: #705c8f;
     overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
 }
 .btn-close
 {

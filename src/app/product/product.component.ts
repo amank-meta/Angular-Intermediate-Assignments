@@ -16,7 +16,7 @@ import {
       state('void', style({ transform : 'translateY(0)'})),
       transition('void => *', [
         style({transform : 'translateY(70%)'}),
-        animate(1700)
+        animate(150)
       ])
     ]),
 
