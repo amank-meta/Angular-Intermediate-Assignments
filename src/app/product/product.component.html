@@ -1,9 +1,9 @@
 <div class="card">
     <div *ngIf="display; else elseBlock">
-        <img class="card-img-top img" src="./assets/camera2.jpeg" style="width: 22rem;">
+        <img class="card-img-top img" [src]=product.image style="width: 22rem;">
         <div class="card-body">
-            <h5 class="card-title text-center">Camera</h5>
-            <h6 class="card-subtitle mb-2 text-muted text-center">Rs 80000 </h6>
+            <h5 class="card-title text-center">{{product.name}}</h5>
+            <h6 class="card-subtitle mb-2 text-muted text-center">{{product.price}}</h6>
             <button changeColor class="btn btn-sm btn-secondary" (click)="onClick()">Show Details</button>
         </div>
     </div>

@@ -1,10 +1,23 @@
-.navbar
+.nav
 {
     background-color: #563d7c;
 }   
-.h1
+.text
 {
     color: white;
-    margin-left: 45%;
+    margin-left: 10px;
 }
-    
+
+a{
+    font-size: 20px;
+    text-decoration: none;
+}   
+
+.add
+{
+    margin-right: 10px;
+}
+body
+{
+ overflow: hidden;
+}

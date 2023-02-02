@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import {
   trigger,
   state,
@@ -28,6 +28,9 @@ import {
   ]
 })
 export class ProductComponent {
+
+  @Input() product : any;
+  
   display = true;
   onClick() {
     this.display = !this.display;
