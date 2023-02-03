@@ -7,17 +7,24 @@
     background-color: #222;
     color: #fff;
 }
-.img
+.main-card{
+    /* justify-content: space-around;
+    display: flex; */
+}
+/* .img
 {
     padding: 20px;
     border: #563d7c;
     border-radius: 3px;
-}
+} */
 .card
 {
-    width: 22rem;
-    margin-left: 33%;
-    margin-top: 5%;
+    display: flex;
+    width: 20rem;
+    justify-content: space-between;
+    /* margin-left: 3%; */
+    margin-top: 2% !important;
+    margin: 1%;
     background-color:#f7f7f9;
     border-color: #705c8f;
     overflow: hidden;
@@ -30,4 +37,18 @@
 .row
 {
     margin-left: 15px;
+}
+.img-container
+{
+    /* width: 9.3cm !important;
+    height: 8 cm !important; */
+    margin: 15px;
+    height: 16rem;
+    /* box-shadow: 0px 0px 12px -4px rgb(0 0 0/0.4); */
+    /* padding: 20px !important; */
+}
+img{
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
 }

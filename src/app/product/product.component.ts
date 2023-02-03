@@ -6,6 +6,7 @@ import {
   transition,
   animate
 } from '@angular/animations';
+import { ProductLogService } from '../product-log.service';
 
 @Component({
   selector: 'app-product',
@@ -29,8 +30,8 @@ import {
 })
 export class ProductComponent {
 
-  @Input() product : any;
-  
+  constructor(private productLogService:ProductLogService){}
+  products:any =this.productLogService.getProduct();
   display = true;
   onClick() {
     this.display = !this.display;

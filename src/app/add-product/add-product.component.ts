@@ -2,6 +2,7 @@ import { isNgTemplate } from '@angular/compiler';
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ProductComponent } from '../product/product.component';
+import {ProductLogService} from '../product-log.service'
 import {Product} from '../Product'
 import { Router } from '@angular/router';
 
@@ -11,9 +12,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./add-product.component.css']
 })
 export class AddProductComponent {
-  @Output() productEmitter = new EventEmitter<Product>();
+ 
 
-  constructor(private route:Router){}
+  constructor(private productLogService:ProductLogService,private route:Router){}
   addProductForm = new FormGroup(
     {
       name:new FormControl('',[Validators.required]),
@@ -36,10 +37,11 @@ export class AddProductComponent {
   }
   onSubmit()
   {
+    console.log("onSubmit buuton");
     console.log(this.addProductForm.value)
-    let item = this.addProductForm.value;
-    let newItem = new Product(item.name,item.image,item.price);
-    this.productEmitter.emit(newItem);
+    // let item = this.addProductForm.value;
+    // let newItem = new Product(item.name,item.image,item.price);
+    this.productLogService.addProduct(this.addProductForm.value);
     this.route.navigate(['home']);
   }
 }

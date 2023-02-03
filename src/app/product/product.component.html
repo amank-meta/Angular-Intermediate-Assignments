@@ -1,67 +1,73 @@
-<div class="card">
-    <div *ngIf="display; else elseBlock">
-        <img class="card-img-top img" [src]=product.image style="width: 22rem;">
-        <div class="card-body">
-            <h5 class="card-title text-center">{{product.name}}</h5>
-            <h6 class="card-subtitle mb-2 text-muted text-center">{{product.price}}</h6>
-            <button changeColor class="btn btn-sm btn-secondary" (click)="onClick()">Show Details</button>
-        </div>
+<div class="main-card d-flex justify-content-center flex-wrap ">
+    <div class="card" *ngFor="let product of products">
+        <ng-container *ngIf="display; else elseBlock">
+            <div>
+                <div class="img-container">
+                <img class="card-img-top img" src={{product.image}} >
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title text-center">{{product.name}} </h5>
+                    <h6 class="card-subtitle mb-2 text-muted text-center">{{product.price | currency:'INR'}}</h6>
+                    <button changeColor class="btn btn-sm btn-secondary" (click)="onClick()">Show Details</button>
+                </div>
+            </div>
+        </ng-container>
     </div>
 </div>
-<ng-template #elseBlock >
+<ng-template #elseBlock>
     <div @motion @fade>
-    <div class="card-body" >
-        <button type="button" class="btn-close" aria-label="Close" (click)="onClick()"></button><br>
-        <h5 class="card-title mt-3 text-center">Shipping Details</h5>
-        <br>
-        <div class="row mb-3">
-            <div class="col-4">
-                <b>Address : </b>
+        <div class="card-body">
+            <button type="button" class="btn-close" aria-label="Close" (click)="onClick()"></button><br>
+            <h5 class="card-title mt-3 text-center">Shipping Details</h5>
+            <br>
+            <div class="row mb-3">
+                <div class="col-4">
+                    <b>Address : </b>
+                </div>
+                <div class="col-8">
+                    Pratap Nagar, Jaipur
+                </div>
             </div>
-            <div class="col-8">
-                Pratap Nagar, Jaipur
+            <div class="row mb-3">
+                <div class="col-4">
+                    <b>State : </b>
+                </div>
+                <div class="col-8">
+                    Rajasthan
+                </div>
             </div>
-        </div>
-        <div class="row mb-3">
-            <div class="col-4">
-                <b>State : </b>
+            <div class="row mb-3">
+                <div class="col-4">
+                    <b>Pincode : </b>
+                </div>
+                <div class="col-8">
+                    302033
+                </div>
             </div>
-            <div class="col-8">
-                Rajasthan
+            <div class="row mb-3">
+                <div class="col-4">
+                    <b>Date: </b>
+                </div>
+                <div class="col-8">
+                    31 January 2023
+                </div>
             </div>
-        </div>
-        <div class="row mb-3">
-            <div class="col-4">
-                <b>Pincode : </b>
+            <div class="row mb-3">
+                <div class="col-4">
+                    <b>Status: </b>
+                </div>
+                <div class="col-8">
+                    Dispatched
+                </div>
             </div>
-            <div class="col-8">
-                302033
-            </div>
-        </div>
-        <div class="row mb-3">
-            <div class="col-4">
-                <b>Date: </b>
-            </div>
-            <div class="col-8">
-                31 January 2023
-            </div>
-        </div>
-        <div class="row mb-3">
-            <div class="col-4">
-                <b>Status: </b>
-            </div>
-            <div class="col-8">
-                Dispatched
-            </div>
-        </div>
-        <div class="row mb-3">
-            <div class="col-4">
-                <b>Cost : </b>
-            </div>
-            <div class="col-8">
-                Rs. 80000
+            <div class="row mb-3">
+                <div class="col-4">
+                    <b>Cost : </b>
+                </div>
+                <div class="col-8">
+                    Rs. 80000
+                </div>
             </div>
         </div>
     </div>
-</div>
 </ng-template>
