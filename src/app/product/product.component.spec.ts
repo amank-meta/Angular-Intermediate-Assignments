@@ -20,4 +20,13 @@ describe('ProductComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should correctly render the Value', () => {
+    const fixture = TestBed.createComponent(ProductComponent);
+    fixture.detectChanges();
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('h5').textContent).toBe('Camera ');
+    
+  });
+
 });

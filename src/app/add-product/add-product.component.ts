@@ -1,6 +1,7 @@
 import { isNgTemplate } from '@angular/compiler';
 import { Component, EventEmitter, Output } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProductComponent } from '../product/product.component';
 import {ProductLogService} from '../product-log.service'
 import {Product} from '../Product'

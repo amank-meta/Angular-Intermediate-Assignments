@@ -1,4 +1,5 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed } from '@angular/core/testing';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AddProductComponent } from './add-product.component';
 
@@ -8,6 +9,7 @@ describe('AddProductComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [ReactiveFormsModule],
       declarations: [ AddProductComponent ]
     })
     .compileComponents();
@@ -20,4 +22,25 @@ describe('AddProductComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should be valid ', () => {
+    component.addProductForm.setValue({
+      "name": "Watch", 
+      "image" : "./assets/watch.jpg",
+      "price" : "1000"
+    });
+    expect(component.addProductForm.valid).toEqual(true);
+  });
+
+  it('should be invalid ', () => {
+    component.addProductForm.setValue({
+      "name": "Watch", 
+      "image" : "",
+      "price" : ""
+    });
+    expect(component.addProductForm.valid).toEqual(true);
+  });
+
+  
+ 
 });

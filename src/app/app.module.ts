@@ -7,7 +7,7 @@ import { ProductComponent } from './product/product.component';
 import { AttributeDirective } from './attribute.directive';
 import { AddProductComponent } from './add-product/add-product.component';
 import { ReactiveFormsModule } from '@angular/forms';
-
+import { FormsModule } from '@angular/forms';
 // import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
@@ -22,7 +22,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     // NgbModule,
     BrowserAnimationsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent,ProductComponent]
